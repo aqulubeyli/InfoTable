@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="data.json"></script>
+    <!-- <meta http-equiv="refresh" content="8; url=index.html"> -->
+    <title>hb</title>
+</head>
+<body>
+    <h1><center>Bu Aya olan Doğum Günləri</center></h1>
+        <!-- <script>
+            fetch("data/data.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        </script> -->
+
+        <p id="demo"></p>
+        <p id="demon"> </p>
+
+        <script>
+
+            // var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+            
+            // document.getElementById("demo").innerHTML = obj.name + obj.age;
+            // document.getElementById("demon").innerHTML=obj_f.name + obj_f.age;
+            // alert(obj_f[0].name);
+
+            var mydata = JSON.parse(data);
+            alert(mydata[0].name);
+        </script>
+
+        </script>
+      
+</body>
+</html>
