@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="8; url=index.html"> -->
+    <title>hb</title>
+</head>
+<body>
+    <h1><center>COVID - 19 Statistic on Azerbaijan</center></h1>
+        <center><p id="tarix"></p><p>tarixine olan veziyyet</p></center>
+	<center><p id="country"></p></center> <br>
+        <center><p id="deceased"></p></center> <br>
+	<center><p id="infected"></p></center> <br>
+ 	<center><p id="recovered"></p></center> <br>
+
+	
+	<script>
+            fetch("https://api.apify.com/v2/key-value-stores/ThmCW2NVnrLa0tVp5/records/LATEST?disableRedirect=true")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+		
+		document.getElementById("tarix").innerHTML=data.lastUpdatedAtApify;
+		document.getElementById("country").innerHTML=data.country;
+		document.getElementById("deceased").innerHTML=data.deceased;
+		document.getElementById("infected").innerHTML=data.infected;
+		document.getElementById("recovered").innerHTML=data.recovered;
+
+            })
+
+
+
+        </script>
+
+      
+</body>
+</html>
